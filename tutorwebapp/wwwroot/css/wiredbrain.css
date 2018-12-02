@@ -92,3 +92,7 @@ body {
     width: 100%;
     max-height: 300px;
 }
+
+.field-validation-error {
+    color: red;
+}
