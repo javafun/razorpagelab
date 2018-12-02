@@ -7,8 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using tutorwebapp.Pages;
 
 namespace tutorwebapp
 {
@@ -32,7 +34,17 @@ namespace tutorwebapp
             });
 
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc()
+                        .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                        .AddRazorPagesOptions(options=>{
+                            options.Conventions.AddPageRoute("/index","home");
+                            options.Conventions.AddPageRoute("/index","wired");
+                        });
+
+            services.Configure<RouteOptions>(opts =>
+            {
+                opts.ConstraintMap.Add("promo", typeof(PromoConstraint));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

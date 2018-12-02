@@ -15,7 +15,8 @@ namespace tutorwebapp.Services
                     Name = "Frosted Pumpkin Bread",
                     Summary = "A seasonal delight we offer every autumn.  Pumpking bread with just a bit of spice, cream cheese frosting with just a hint of home.",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
-                    ImageFile = "pumpkinbread.png"
+                    ImageFile = "pumpkinbread.png",
+                    Slug = "pumpkin-bread"
                 },
                 new MenuItem()
                 {
@@ -23,7 +24,8 @@ namespace tutorwebapp.Services
                     Name = "Ground to Go",
                     Summary = "Love our coffee? Take it with you so you never have to be without!",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.",
-                    ImageFile = "ground.png"
+                    ImageFile = "ground.png",
+                    Slug = "ground-coffee"
                 },
                 new MenuItem()
                 {
