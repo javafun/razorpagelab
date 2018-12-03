@@ -2,7 +2,7 @@ using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 
-namespace tutorwebapp.Pages
+namespace tutorwebapp
 {
     public class PromoConstraint : IRouteConstraint
     {

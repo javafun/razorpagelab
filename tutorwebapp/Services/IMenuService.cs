@@ -6,5 +6,7 @@ namespace tutorwebapp.Services
     interface IMenuService
     {
         List<MenuItem> GetMenuItems();
+
+        List<MenuItem> GetPopularItems();
     }
 }
