@@ -36,9 +36,10 @@ namespace tutorwebapp
 
             services.AddMvc()
                         .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-                        .AddRazorPagesOptions(options=>{
-                            options.Conventions.AddPageRoute("/index","home");
-                            options.Conventions.AddPageRoute("/index","wired");
+                        .AddRazorPagesOptions(options =>
+                        {
+                            options.Conventions.AddPageRoute("/index", "home");
+                            options.Conventions.AddPageRoute("/index", "wired");
                         });
 
             services.Configure<RouteOptions>(opts =>
