@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using tutorwebapp.Models;
 using tutorwebapp.Services;
+using tutorwebapp.Utils;
 
 namespace tutorwebapp.Pages
 {
@@ -33,7 +34,9 @@ namespace tutorwebapp.Pages
 
         public IActionResult OnPostSubscribe(string address)
         {
-                EmailService.SendEmail(address);
+            if (!RegexUtilities.IsValidEmail(address))
+                throw new Exception("Email address is invalid");
+            EmailService.SendEmail(address);
                 return new RedirectToPageResult("Confirmation","Subscribe");
         }
     }
